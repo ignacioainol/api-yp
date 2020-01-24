@@ -2,7 +2,8 @@ const express = require('express');
 const router = express.Router();
 
 router.post('/create',(req,res) => {
-    res.send("create user");
+    const {body} = req;
+    res.send(body);
 });
 
 module.exports = router;

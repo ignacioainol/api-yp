@@ -3,6 +3,11 @@ const app = express();
 
 //config
 app.set('port', 3000 || process.env.PORT);
+
+//middlewares
+app.use(express.urlencoded({extended:false}));
+
+//routes
 app.use(require('./routes'));
 
 
