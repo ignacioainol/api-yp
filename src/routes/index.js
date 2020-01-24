@@ -1,9 +1,8 @@
 const express = require('express');
-const router = express.Router();
+const app = express();
 
 
-router.get('/',(req,res) => {
-    res.send("testing one");
-})
+app.use('/v1/users', require('./users'));
 
-module.exports = router;
+
+module.exports = app;
